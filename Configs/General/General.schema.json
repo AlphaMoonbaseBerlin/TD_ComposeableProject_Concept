@@ -5,87 +5,52 @@
  "description": "A dynamic and schemabased jsonConfig for Touchdesigner",
  "type": "object",
  "properties": {
-  "NamedList": {
-   "description": "",
-   "type": "object",
-   "additionalProperties": {
-    "description": "",
-    "type": [
-     "string"
-    ]
-   }
-  },
-  "Some_Integer": {
-   "description": "",
-   "type": [
-    "number",
-    "integer"
-   ]
-  },
-  "Some_String": {
-   "description": "",
-   "type": [
-    "string"
-   ]
-  },
-  "Subdata": {
+  "Global": {
    "description": "",
    "type": "object",
    "properties": {
-    "Sub": {
-     "description": "",
+    "TransportPort": {
+     "description": "The port that is used for the transport using TouchIn/Out",
      "type": [
       "integer"
      ]
-    },
-    "SubDict": {
-     "description": "",
-     "type": "object",
-     "properties": {
-      "SubSubValue": {
-       "description": "",
-       "type": [
-        "string"
-       ]
-      }
-     }
     }
    }
   },
-  "Sublist": {
+  "Plugins": {
    "description": "",
-   "type": "array",
-   "items": {
-    "description": "",
-    "type": [
-     "string"
-    ]
-   }
-  },
-  "Prefilled_Sublist": {
-   "description": "",
-   "type": "array",
-   "items": {
-    "description": "",
-    "type": [
-     "string"
-    ]
-   }
-  },
-  "PositiveValue": {
-   "description": "",
-   "type": [
-    "integer"
-   ]
-  },
-  "Prefilled_Validated": {
-   "description": "",
-   "type": "array",
-   "items": {
-    "description": "",
-    "type": [
-     "integer"
-    ]
+   "type": "object",
+   "properties": {
+    "Ui": {
+     "description": "Should Ui be activated for this deployment?",
+     "type": [
+      "boolean"
+     ]
+    },
+    "AudioPlayer": {
+     "description": "Should AudioPlayer be activated for this deployment?",
+     "type": [
+      "boolean"
+     ]
+    },
+    "MoviePlayer": {
+     "description": "Should MoviePlayer be activated for this deployment?",
+     "type": [
+      "boolean"
+     ]
+    },
+    "VideoOutput": {
+     "description": "Should VideoOutput be activated for this deployment?",
+     "type": [
+      "boolean"
+     ]
+    },
+    "PlayerTransport": {
+     "description": "Should PlayerTransport be activated for this deployment?",
+     "type": [
+      "boolean"
+     ]
+    }
    }
   }
  }

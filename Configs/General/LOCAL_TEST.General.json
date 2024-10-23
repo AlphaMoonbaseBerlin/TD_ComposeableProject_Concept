@@ -1,0 +1,33 @@
+{
+    "Global": {
+        "TransportPort": 9500
+    },
+    "Plugins": {
+        "Ui": {
+            "Active": false,
+            "Settings": {}
+        },
+        "AudioPlayer": {
+            "Active": false,
+            "Settings": {}
+        },
+        "MoviePlayer": {
+            "Active": true,
+            "Settings": {
+                "Address": "localhost",
+                "Port": 9501
+            }
+        },
+        "VideoOutput": {
+            "Active": false,
+            "Settings": {}
+        },
+        "PlayerTransport": {
+            "Active": true,
+            "Settings": {
+                "Port": 9501
+            }
+        }
+    },
+    "$schema": "./LOCAL_TEST.General.schema.json"
+}

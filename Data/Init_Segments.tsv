@@ -1,2 +1,5 @@
 name	length
 Startup	1
+SettingPlugins	1
+InitPlugins	1
+FinalizePlugins	1
