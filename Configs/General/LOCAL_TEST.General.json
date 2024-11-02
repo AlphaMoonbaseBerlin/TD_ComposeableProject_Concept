@@ -15,7 +15,8 @@
             "Active": true,
             "Settings": {
                 "Address": "localhost",
-                "Port": 9501
+                "Port": 9501,
+                "Fileprefix": ""
             }
         },
         "VideoOutput": {

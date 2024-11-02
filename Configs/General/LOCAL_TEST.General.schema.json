@@ -80,6 +80,12 @@
          "type": [
           "integer"
          ]
+        },
+        "Fileprefix": {
+         "description": "",
+         "type": [
+          "string"
+         ]
         }
        }
       }
