@@ -1,18 +1,21 @@
-# Composeable Project Concept
-This repository is a project that highlights the idea of DODE. Develop Once, Deploy Everyhwere for TouchDesigner. 
-The idea is that, especially for distributed systems, we do not want to develop certain aspects seperate from on another as this tends to result in repetition for functionality and harder debugging.
-The following approach sees components as Plugins. Elements to a project that can be plugged in to the logic, but are not hard coded and needed. This results in us being able to dynamicly describe the project using a config-file and activating and deactivating elements resulting in a flexible setup.
+### Composable Project Concept
 
-## The Config
-The Config is a pretty important part of the concept and utilisies the JsonConfig-Component, which generates the Schema based on dynamic callbacks.
-We can make use of this by creating the schema in runtime and using customParameters as our definition.
-You can finde them in /project/Configs
-Right now we are setting the values from the config once on startup, but this is something that could be done dynamicly, even with binding to allow fer fast paced setup.
-Also, the way this is setup is pretty barebones as we do not have a proper parsing of the parameters, so it will only work with strings and numbers for now.
+This repository showcases the concept of **DODE: Develop Once, Deploy Everywhere** for TouchDesigner. The goal is to avoid developing certain aspects of distributed systems separately, as this often leads to redundant functionality and more challenging debugging. In this approach, components function as plugins—modular elements that can be integrated into the project logic without being hard-coded as essential elements. This allows for a dynamic project structure, defined through a configuration file, where elements can be activated or deactivated as needed, resulting in a flexible setup.
 
-## Init Procedure
-The InitProcedure is tun by the InitEmitter in root. It has 4 Steps, Startup, where nothing should happen, InitPlugins where the internal processes are run like loading data/configs etc and FinalizePlugins where Components start running, for example opening the playback video.
-To react to the events use the eventListener Component.
+### The Config
 
-## Store
-The idea of the OP-Store is pretty streight forward. Defining a single Place where we define important OPs. This is our single source of truth. Do not use global OP shortcuts or global iOPs. The store is the only place to define the refference.
+The configuration file plays a key role in this concept, utilizing the `JsonConfig` component, which generates a schema based on dynamic callbacks. By defining the schema at runtime and using custom parameters, the configuration can be highly adaptable. These configurations can be found in `/project/Configs`. Currently, values from the configuration are set once on startup, though this could be done dynamically, potentially with binding, to allow for rapid setup adjustments. As it stands, this setup is somewhat basic and lacks robust parameter parsing, so it currently supports only string and number data types.
+
+### Init Procedure
+
+The initialization process is managed by the `InitEmitter` component in the root directory and consists of three stages:
+
+1. **Startup:** Where no processes occur.
+2. **InitPlugins:** Where internal processes, such as loading data and configurations, are executed.
+3. **FinalizePlugins:** Where components begin functioning, such as initiating video playback.
+
+To respond to these events, use the `eventListener` component.
+
+### Store
+
+The concept of the **OP Store** is straightforward: it serves as a single, centralized location to define important OPs, acting as a single source of truth. Avoid using global OP shortcuts or global iOPs. The store should be the only place where OP references are defined.
