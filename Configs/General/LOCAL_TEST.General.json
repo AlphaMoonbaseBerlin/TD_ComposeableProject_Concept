@@ -4,7 +4,7 @@
     },
     "Plugins": {
         "Ui": {
-            "Active": false,
+            "Active": true,
             "Settings": {}
         },
         "AudioPlayer": {
